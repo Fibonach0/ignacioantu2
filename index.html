@@ -76,6 +76,22 @@ a {
           -->
           <a href="https://imgur.com/a/ZnAZG2K" target="_blank"> <br> Eita <br> <img src="https://i.imgur.com/Xb4ul5H.jpg" alt="Eita" width="333" height="500"></a>
         </article>
+       <p>Esta es tu ubicación en Latitud y longitud: <br></p>
+       <script>
+var x = document.getElementById("demo");
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else {
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude +
+  "<br>Longitude: " + position.coords.longitude;
+}
+</script>
                             
                                     
        <!--
